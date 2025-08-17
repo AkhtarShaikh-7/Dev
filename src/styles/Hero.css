@@ -39,15 +39,17 @@
 
 /* ---------- Text ---------- */
 .container h1 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: 1.8rem;       /* smaller for desktop/laptop */
+    white-space: nowrap;      /* prevent line breaks */
 }
 
 .container h2 {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-size: 1.4rem;
+    white-space: nowrap;
 }
 
 .container p {
-    font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -87,10 +89,18 @@
 /* ---------- Responsive Styles ---------- */
 
 /* Laptops & Tablets */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .container {
-        width: 80vw;
+        width: 70vw;
         padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 1.6rem;
+    }
+
+    .container h2 {
+        font-size: 1.2rem;
     }
 
     .hero-button button {
@@ -100,11 +110,40 @@
     }
 }
 
+/* Tablets smaller */
+@media (max-width: 992px) {
+    .container {
+        width: 80vw;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.1rem;
+    }
+}
+
 /* Mobile */
 @media (max-width: 600px) {
     .container {
         width: 95vw;
         padding: 10px;
+    }
+
+    .container h1 {
+        font-size: 1.3rem;
+        white-space: normal;  /* allow wrapping on small screens */
+    }
+
+    .container h2 {
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .container p {
+        font-size: 0.95rem;
     }
 
     .hero-button {
