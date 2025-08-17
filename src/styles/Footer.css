@@ -1,0 +1,58 @@
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Social Section */
+.footer-socials h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ff4757;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4757;
+  transform: scale(1.2);
+}
+
+/* Bottom Section */
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+.footer-bottom p:last-child {
+  margin-top: 5px;
+  color: #ff4757;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 15px;
+    font-size: 1.6rem;
+  }
+  .footer{
+    margin-top: -220px;
+  }
+}

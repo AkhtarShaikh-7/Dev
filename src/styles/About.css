@@ -1,0 +1,143 @@
+.about {
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    color: white;
+    position: relative;
+    z-index: 2;
+    /* padding: 40px 20px; */
+}
+
+.about-container {
+   margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* important for smaller screens */
+}
+
+.left-img img {
+    height: 400px;
+    width: 300px;
+    border: 1px solid red;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.left-img img:hover {
+    box-shadow: 4px 6px 44px red;
+    transition: 1s;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.right-content h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+    text-shadow: 7px 3px 7px red;
+}
+
+span {
+    color: red;
+}
+
+.right-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.right-content button {
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.right-content button:hover {
+    background-color: red;
+    transition: 0.5s;
+}
+
+/* Box of Cards */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    flex-wrap: wrap;
+    /* margin-top: 10px; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-img img {
+        height: 350px;
+        width: 260px;
+    }
+
+    .right-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .right-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .about-container {
+        margin-top: 100px;
+        gap: 40px;
+    }
+
+    .left-img img {
+        height: 280px;
+        width: 90%;
+    }
+
+    .right-content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .right-content h1 {
+        font-size: 2rem;
+    }
+
+    .right-content p {
+        font-size: 1rem;
+    }
+
+    .right-content button {
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+    }
+}
