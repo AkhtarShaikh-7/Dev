@@ -1,3 +1,4 @@
+/* ---------- Hero Section ---------- */
 .hero {
     min-height: 88vh;
     width: 100%;
@@ -10,22 +11,7 @@
     padding: 20px;
 }
 
-/* .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    height: auto;
-    width: 60vw;
-    z-index: 2;
-    border: 1px solid red;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-} */
-
-
+/* ---------- Container ---------- */
 .container {
     display: flex;
     flex-direction: column;
@@ -40,36 +26,32 @@
     border-radius: 20px;
     text-align: center;
 
-    /* Additions */
+    /* Frosted glass effect */
     background: rgba(0, 0, 0, 0.6);
-    /* translucent overlay */
     backdrop-filter: blur(10px);
-    /* frosted glass effect */
     box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
-    /* soft glow */
     transition: transform 0.3s ease-in-out;
 }
 
 .container:hover {
     transform: scale(1.02);
-    /* subtle zoom on hover */
 }
 
-
-
+/* ---------- Text ---------- */
 .container h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 .container h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
 }
 
 .container p {
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.2rem);
     line-height: 1.6;
 }
 
+/* ---------- Particles ---------- */
 #tsparticles {
     position: absolute;
     top: 0;
@@ -80,7 +62,7 @@
     pointer-events: none;
 }
 
-/* Buttons */
+/* ---------- Buttons ---------- */
 .hero-button {
     display: flex;
     gap: 30px;
@@ -95,32 +77,20 @@
     font-weight: 600;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
 .hero-button button:hover {
     background: red;
-    transition: 0.4s ease-in-out;
 }
 
 /* ---------- Responsive Styles ---------- */
 
-/* Tablets */
+/* Laptops & Tablets */
 @media (max-width: 992px) {
     .container {
         width: 80vw;
         padding: 15px;
-    }
-
-    .container h1 {
-        font-size: 2.5rem;
-    }
-
-    .container h2 {
-        font-size: 1.8rem;
-    }
-
-    .container p {
-        font-size: 1.2rem;
     }
 
     .hero-button button {
@@ -137,18 +107,6 @@
         padding: 10px;
     }
 
-    .container h1 {
-        font-size: 2rem;
-    }
-
-    .container h2 {
-        font-size: 1.5rem;
-    }
-
-    .container p {
-        font-size: 1rem;
-    }
-
     .hero-button {
         flex-direction: column;
         gap: 15px;
@@ -159,6 +117,4 @@
         height: 45px;
         font-size: 15px;
     }
-
-    
 }
